@@ -3,89 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Utama BUMDes</title>
+    <title>Portal BUMDES CMMSC</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .unit-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .unit-card:hover { transform: translateY(-5px); }
+        .btn-grad { background: linear-gradient(135deg, #059669 0%, #10b981 100%); }
+    </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="text-slate-900">
 
-    <nav class="bg-emerald-600 p-4 text-white shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-         <div class="flex items-center space-x-3">
-                <img src="https://i.ibb.co.com/8gjqjMfB/logo-cmmsc.jpg" width="40">
-                <h1 class="font-bold text-xl text-green-800">BUMDES CMMSC</h1>
+    <nav class="glass-nav sticky top-0 z-50 border-b border-slate-200">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-emerald-600 p-1.5 rounded-lg shadow-lg shadow-emerald-200">
+                    <img src="https://i.ibb.co.com/8gjqjMfB/logo-cmmsc.jpg" width="32" class="rounded-md">
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg text-emerald-900 leading-none">CMMSC</h1>
+                    <p class="text-[10px] font-semibold text-emerald-600 uppercase tracking-wider">Digital Portal</p>
+                </div>
             </div>
-            <h1 class="text-xl font-bold"><i class="fas fa-landmark mr-2"></i> PORTAL TERPADU BUMDES</h1>
-            <div class="text-sm">Admin Desa v1.0</div>
+            <div class="flex items-center bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
+                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></div>
+                <span class="text-[10px] font-bold text-slate-600">SERVER ACTIVE</span>
+            </div>
         </div>
     </nav>
 
-    <div class="container mx-auto py-10 px-4">
-        <h2 class="text-2xl font-semibold mb-6 text-gray-700 text-center">Pilih Unit Aplikasi</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <header class="container mx-auto px-4 pt-8 pb-4">
+    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 relative overflow-hidden">
+        <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-800">Halo, Pengelola! 👋</h2>
+                <p class="text-slate-500 text-sm mt-1">Status Keuangan Unit Usaha BUMDes Terkini:</p>
+            </div>
             
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <i class="fas fa-hand-holding-usd text-4xl text-emerald-500"></i>
-                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Aktif</span>
+            <div id="summary-container" class="flex gap-4 overflow-x-auto pb-2 no-scrollbar">
+                <div class="animate-pulse bg-slate-100 h-16 w-40 rounded-2xl"></div>
+                <div class="animate-pulse bg-slate-100 h-16 w-40 rounded-2xl"></div>
+            </div>
+        </div>
+        <div class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-50 rounded-full blur-3xl"></div>
+    </div>
+</header>
+
+    <main class="container mx-auto px-4 py-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <div class="unit-card bg-white p-5 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-wifi text-xl text-emerald-600"></i>
                     </div>
-                    <h3 class="font-bold text-lg text-gray-800">Unit Internet Desa</h3>
-                    <p class="text-gray-600 text-sm mt-2 leading-relaxed">Kelola data pelanggan, Pembayaran, dan administras secara transparan.</p>
-                    <a href="https://script.google.com/macros/s/AKfycbyVcOnBt4mmABDIE4qht9MdYqj5faqpbEHxx6efIjXrQIOU189XAl7HpzHssGj7ZgUpBw/exec" target="_blank" class="mt-4 block text-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 rounded-lg transition">
-                        Buka Aplikasi <i class="fas fa-external-link-alt ml-1"></i>
-                    </a>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg text-slate-800">Internet Desa</h3>
+                        <span class="text-[10px] font-bold bg-green-100 text-green-700 px-2 py-1 rounded-md">AKTIF</span>
+                    </div>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Manajemen pelanggan, billing tagihan, dan monitoring jaringan desa.</p>
                 </div>
+                <a href="https://script.google.com/macros/s/AKfycbyVcOnBt4mmABDIE4qht9MdYqj5faqpbEHxx6efIjXrQIOU189XAl7HpzHssGj7ZgUpBw/exec" target="_blank" 
+                   class="btn-grad mt-6 py-3 rounded-2xl text-white text-sm font-bold text-center shadow-lg shadow-emerald-100 active:scale-95 transition-all">
+                    Buka Unit
+                </a>
             </div>
 
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <i class="fas fa-store text-4xl text-blue-500"></i>
-                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Aktif</span>
+            <div class="unit-card bg-white p-5 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-shopping-bag text-xl text-blue-600"></i>
                     </div>
-                    <h3 class="font-bold text-lg text-gray-800">Unit Perdagangan dan Jasa (Toko)</h3>
-                    <p class="text-gray-600 text-sm mt-2 leading-relaxed">Inventaris stok barang, penjualan kasir (POS), dan laporan laba rugi toko.</p>
-                    <a href="https://script.google.com/macros/s/AKfycbzeFGvvEdtsDY4O5Jzg1Grb7YO13-4i8K39OzVsewE46EQ77ewGKM1decFWNUSVjVcr0Q/exec" target="_blank" class="mt-4 block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition">
-                        Buka Aplikasi <i class="fas fa-external-link-alt ml-1"></i>
-                    </a>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg text-slate-800">Perdagangan & Jasa</h3>
+                        <span class="text-[10px] font-bold bg-green-100 text-green-700 px-2 py-1 rounded-md">AKTIF</span>
+                    </div>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Kasir digital (POS), manajemen stok barang, dan laporan laba rugi toko.</p>
                 </div>
+                <a href="https://script.google.com/macros/s/AKfycbzeFGvvEdtsDY4O5Jzg1Grb7YO13-4i8K39OzVsewE46EQ77ewGKM1decFWNUSVjVcr0Q/exec" target="_blank" 
+                   class="bg-blue-600 py-3 rounded-2xl text-white text-sm font-bold text-center shadow-lg shadow-blue-100 active:scale-95 transition-all">
+                    Buka Unit
+                </a>
             </div>
 
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <i class="fas fa-recycle text-4xl text-orange-500"></i>
-                        <span class="bg-green-100 text-yellow-800 text-xs px-2 py-1 rounded">Aktif</span>
+            <div class="unit-card bg-white p-5 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-egg text-xl text-orange-600"></i>
                     </div>
-                    <h3 class="font-bold text-lg text-gray-800">Unit Ketahanan Pangan Ayam Petelur</h3>
-                    <p class="text-gray-600 text-sm mt-2 leading-relaxed">Pencatatan harian/monitoring Kandang Ayam, Pencatatan Hasil Telur dan Penjualan dan Biaya Operasional secara Transparan .</p>
-                    <a href="https://script.google.com/macros/s/AKfycbyJMPT09_j-W0_7j8ica9nGI9LPJDSFJV_5kwFj2CNWESkY6YJ1BzMmz_PZfT1nof0_/exec" target="_blank" class="mt-4 block text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg transition cursor-not-allowed">
-                        Buka Aplikasi <i class="fas fa-external-link-alt ml-1"></i>
-                    </a>
-                </div>
-            </div>
-<div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <i class="fas fa-recycle text-4xl text-orange-500"></i>
-                        <span class="bg-green-100 text-yellow-800 text-xs px-2 py-1 rounded">Aktif</span>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg text-slate-800">Ayam Petelur</h3>
+                        <span class="text-[10px] font-bold bg-green-100 text-green-700 px-2 py-1 rounded-md">AKTIF</span>
                     </div>
-                    <h3 class="font-bold text-lg text-gray-800">Unit Pengelolaan Sampah Desa</h3>
-                    <p class="text-gray-600 text-sm mt-2 leading-relaxed">Pencatatan Pelanggan, Pembayaran iuran dan Biaya Operasional secara Transparan .</p>
-                    <a href="https://script.google.com/macros/s/AKfycbyJMPT09_j-W0_7j8ica9nGI9LPJDSFJV_5kwFj2CNWESkY6YJ1BzMmz_PZfT1nof0_/exec" target="_blank" class="mt-4 block text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg transition cursor-not-allowed">
-                        Buka Aplikasi <i class="fas fa-external-link-alt ml-1"></i>
-                    </a>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Monitoring kandang harian, hasil produksi telur, dan biaya pakan.</p>
                 </div>
+                <a href="https://script.google.com/macros/s/AKfycbyJMPT09_j-W0_7j8ica9nGI9LPJDSFJV_5kwFj2CNWESkY6YJ1BzMmz_PZfT1nof0_/exec" target="_blank" 
+                   class="bg-orange-500 py-3 rounded-2xl text-white text-sm font-bold text-center shadow-lg shadow-orange-100 active:scale-95 transition-all">
+                    Buka Unit
+                </a>
             </div>
 
+            <div class="unit-card bg-white p-5 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-teal-100 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-truck-moving text-xl text-teal-600"></i>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg text-slate-800">Pengelolaan Sampah</h3>
+                        <span class="text-[10px] font-bold bg-green-100 text-green-700 px-2 py-1 rounded-md">AKTIF</span>
+                    </div>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Data iuran warga, jadwal armada, dan operasional pengangkutan sampah.</p>
+                </div>
+                <a href="https://script.google.com/macros/s/AKfycbyJMPT09_j-W0_7j8ica9nGI9LPJDSFJV_5kwFj2CNWESkY6YJ1BzMmz_PZfT1nof0_/exec" target="_blank" 
+                   class="bg-teal-600 py-3 rounded-2xl text-white text-sm font-bold text-center shadow-lg shadow-teal-100 active:scale-95 transition-all">
+                    Buka Unit
+                </a>
+            </div>
+
+            <div class="unit-card bg-white p-5 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-file-invoice text-xl text-purple-600"></i>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-lg text-slate-800">Sistem Kwitansi</h3>
+                        <span class="text-[10px] font-bold bg-green-100 text-green-700 px-2 py-1 rounded-md">AKTIF</span>
+                    </div>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Pencatatan kas masuk & keluar terpusat untuk akuntansi BUMDes.</p>
+                </div>
+                <a href="https://script.google.com/macros/s/AKfycbyJMPT09_j-W0_7j8ica9nGI9LPJDSFJV_5kwFj2CNWESkY6YJ1BzMmz_PZfT1nof0_/exec" target="_blank" 
+                   class="bg-purple-600 py-3 rounded-2xl text-white text-sm font-bold text-center shadow-lg shadow-purple-100 active:scale-95 transition-all">
+                    Buka Unit
+                </a>
+            </div>
 
         </div>
-    </div>
+    </main>
+<script>
+    const SCRIPT_URL = "URL_WEB_APP_ANDA"; // GANTI DENGAN URL DEPLOY ANDA
 
-    <footer class="text-center py-6 text-gray-500 text-xs">
-        &copy; 2026 Pemerintah Desa - Power by BUMDes Digital Center
+    async function loadSummary() {
+        try {
+            const response = await fetch(SCRIPT_URL + "?action=getSummary");
+            const data = await response.json();
+            
+            const container = document.getElementById('summary-container');
+            container.innerHTML = ''; // Hapus loader
+
+            data.forEach(item => {
+                const card = `
+                    <div class="flex-shrink-0 bg-emerald-50 border border-emerald-100 p-3 rounded-2xl min-w-[160px]">
+                        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-tight">${item.unit}</p>
+                        <p class="text-lg font-bold text-emerald-900">Rp ${Number(item.angka).toLocaleString('id-ID')}</p>
+                        <p class="text-[9px] text-emerald-400 italic">Upd: ${item.tanggal}</p>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
+        } catch (error) {
+            console.error("Gagal memuat data:", error);
+            document.getElementById('summary-container').innerHTML = "<p class='text-xs text-red-500'>Gagal memuat data keuangan.</p>";
+        }
+    }
+
+    // Jalankan fungsi saat halaman dibuka
+    window.onload = loadSummary;
+</script>
+
+<style>
+    /* Menghilangkan scrollbar tapi tetap bisa di-scroll */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+    <footer class="container mx-auto px-4 py-8 text-center">
+        <div class="h-[1px] w-full bg-slate-200 mb-6"></div>
+        <p class="text-slate-400 text-xs font-medium uppercase tracking-widest">&copy; 2026 CMMSC Digital Ecosystem</p>
+        <p class="text-slate-300 text-[10px] mt-1 italic italic">"Membangun Desa, Menyejahterakan Warga"</p>
     </footer>
 
 </body>
